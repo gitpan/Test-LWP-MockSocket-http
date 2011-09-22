@@ -3,3 +3,4 @@ Revision history for Test-LWP-MockSocket-http
 0.01    Date/time
         First version, released on an unsuspecting world.
 
+0.03	Fixed // to if !defined idiom to support older perls

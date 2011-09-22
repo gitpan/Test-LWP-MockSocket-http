@@ -17,7 +17,7 @@ our @EXPORT = qw(
     mocksock_mode mocksock_response
 );
 
-our $VERSION = 0.02;
+our $VERSION = 0.03;
 our ($LWP_Response, $LWP_SocketArgs);
 
 my $MODE = HT_MOCKSOCK_PERSIST;
@@ -67,7 +67,7 @@ sub _initialize {
 
 sub _ensure_response_mode {
     return unless !$SEND_REQUEST_DONE;
-    my $reftype = ref $LWP_Response // "";
+    my $reftype = ref $LWP_Response;
     if($reftype eq 'CODE') {
         my $req = HTTP::Request->parse($REQDATA);
         $RESPONSE_BUF = $LWP_Response->($REQDATA, $req, $LWP_SocketArgs);
