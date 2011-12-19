@@ -19,5 +19,6 @@ no_index:
     - inc
 requires:
   IO::String: 1.08
+  LWP::Protocol::http: 0
   Test::More: 0
-version: 0.04
+version: 0.05
